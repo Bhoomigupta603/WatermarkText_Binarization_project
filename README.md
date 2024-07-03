@@ -56,16 +56,16 @@ from rembg import remove
 from PIL import Image
 import os
 
-# Path to the folder containing the images
+#Path to the folder containing the images
 predict_folder = "/content/drive/MyDrive/YOLOv8s/runs/detect/predict"
 
-# Path to the folder where you want to save the results
+#Path to the folder where you want to save the result
 output_folder = "/content/drive/MyDrive/Background_removal"
 
-# Ensure the output folder exists
+#Ensure the output folder exists
 os.makedirs(output_folder, exist_ok=True)
 
-# Iterate through each file in the predict folder
+#Iterate through each file in the predict folder
 for filename in os.listdir(predict_folder):
     if filename.endswith(".jpg") or filename.endswith(".png"):
         # Load the image
@@ -91,16 +91,16 @@ from rembg import remove
 from PIL import Image
 import os
 
-# Path to the folder containing the images
+#Path to the folder containing the images
 predict_folder = "/content/drive/MyDrive/YOLOv8s/runs/detect/predict18"
 
-# Path to the folder where you want to save the results
+#Path to the folder where you want to save the results
 output_folder = "/content/drive/MyDrive/background_unseen"
 
-# Ensure the output folder exists
+#Ensure the output folder exists
 os.makedirs(output_folder, exist_ok=True)
 
-# Iterate through each file in the predict folder
+#Iterate through each file in the predict folder
 for filename in os.listdir(predict_folder):
     if filename.endswith(".jpg") or filename.endswith(".png"):
         # Load the image
@@ -131,20 +131,20 @@ import os
 import numpy as np
 import pywt
 
-# Path to the folder containing watermark images
+#Path to the folder containing watermark images
 input_folder = "/content/drive/MyDrive/Background_removal"
 
-# Output folder for wavelet transformed images
+#Output folder for wavelet transformed images
 output_folder = "/content/drive/MyDrive/Wavelet_Transform_Images"
 
-# Create the output folder if it doesn't exist
+#Create the output folder if it doesn't exist
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)
 
-# List all files in the input folder
+#List all files in the input folder
 image_files = os.listdir(input_folder)
 
-# Loop through the watermark image files and apply wavelet transform
+#Loop through the watermark image files and apply wavelet transform
 for image_file in image_files:
     # Create the full path for the input watermark image
     input_image_path = os.path.join(input_folder, image_file)
@@ -185,20 +185,20 @@ import os
 import numpy as np
 import pywt
 
-# Path to the folder containing watermark images
+#Path to the folder containing watermark images
 input_folder = "/content/drive/MyDrive/background_unseen"
 
-# Output folder for wavelet transformed images
+#Output folder for wavelet transformed images
 output_folder = "/content/drive/MyDrive/wavelet_unseen"
 
-# Create the output folder if it doesn't exist
+#Create the output folder if it doesn't exist
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)
 
-# List all files in the input folder
+#List all files in the input folder
 image_files = os.listdir(input_folder)
 
-# Loop through the watermark image files and apply wavelet transform
+#Loop through the watermark image files and apply wavelet transform
 for image_file in image_files:
     # Create the full path for the input watermark image
     input_image_path = os.path.join(input_folder, image_file)
@@ -240,20 +240,20 @@ import cv2
 import glob
 import os
 
-# Path to the folder containing watermark images
+#Path to the folder containing watermark images
 input_folder = "/content/drive/MyDrive/Background_removal"
 
-# Output folder for binarized images
+#Output folder for binarized images
 output_folder = "/content/drive/MyDrive/OTSU_Binarization"
 
-# Create the output folder if it doesn't exist
+#Create the output folder if it doesn't exist
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)
 
-# List all files in the input folder
+#List all files in the input folder
 image_files = glob.glob(os.path.join(input_folder, "*.jpg"))
 
-# Loop through the image files and convert each to binary format using Otsu's thresholding
+#Loop through the image files and convert each to binary format using Otsu's thresholding
 for image_file in image_files:
     # Create the full path for the input image
     input_image_path = os.path.join(input_folder, image_file)
@@ -278,20 +278,20 @@ print("Extracted Image Binarization completed.")
 import cv2
 import os
 
-# Path to the folder containing watermark images
+#Path to the folder containing watermark images
 input_folder = "/content/drive/MyDrive/background_unseen"
 
-# Output folder for binarized images
+#Output folder for binarized images
 output_folder = "/content/drive/MyDrive/otsu_unseen_new"
 
-# Create the output folder if it doesn't exist
+#Create the output folder if it doesn't exist
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)
 
-# List all files in the input folder
+#List all files in the input folder
 image_files = os.listdir(input_folder)
 
-# Loop through the image files and convert each to binary format using Otsu's thresholding
+#Loop through the image files and convert each to binary format using Otsu's thresholding
 for image_file in image_files:
     # Create the full path for the input image
     input_image_path = os.path.join(input_folder, image_file)
