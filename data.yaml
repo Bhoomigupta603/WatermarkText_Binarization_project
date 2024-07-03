@@ -1,0 +1,14 @@
+path: /content/drive/MyDrive/YOLOv8s/Major
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ["watermark"]
+
+roboflow:
+  workspace: project
+  project: watermark-detection-1ikeu
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/project/watermark-detection-1ikeu/dataset/1
